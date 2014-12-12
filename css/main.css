@@ -36,9 +36,16 @@ a:focus {
   line-height: 1;
   text-shadow: none;
 }
+#mmenu .navbar-nav>li.active>a,
 #mmenu .navbar-nav>li>a:hover {
   text-decoration: underline;
+  background: none;
+  box-shadow: none;
 }
+/*
+#mmenu .navbar-nav>li.active {
+}
+*/
 #mmenu .navbar-toggle {
   border-color: #f6f6f6;
   -webkit-transition: all .15s;

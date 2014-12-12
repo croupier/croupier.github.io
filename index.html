@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="./js/blueimp/css/blueimp-gallery.css">
   <link rel="stylesheet" href="./js/blueimp/css/blueimp-gallery-indicator.css">
-  <link rel="stylesheet" href="./css/main.min.css?12122014-5">
+  <link rel="stylesheet" href="./css/main.min.css?12122014-6">
   <!--    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>-->
   <!--  <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400italic,400&subset=latin,cyrillic' rel='stylesheet' type='text/css'>-->
   <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,700italic,400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -531,25 +531,31 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
   <script src="./js/jquery.smooth-scroll.min.js"></script>
-<!--  <script src="./js/jquery-scrollspy.min.js"></script>-->
   <script>
     $(function () {
-      $('#mmenu .navbar-nav>li>a').on('click', function (e) {
-        e.preventDefault();
+      var menuToggler = $('.navbar-default .navbar-toggle');
 
-        var target = $(this).attr('href');
+      $('#mmenu .navbar-nav>li>a').each(function (e) {
+        var self = $(this);
+        var target = self.attr('href');
 
-        $.smoothScroll({
-          scrollElement: null,
-          scrollTarget: target,
-          offset: -70
+        self.on('click', function (e) {
+          e.preventDefault();
+
+          $.smoothScroll({
+            scrollElement: null,
+            scrollTarget: target,
+            offset: -50
+          });
+
+          if (menuToggler.css('display') !== 'none') {
+            menuToggler.trigger('click');
+          }
         });
+      });
 
-        var menuToggler = $('.navbar-default .navbar-toggle');
-
-        if (menuToggler.css('display') !== 'none') {
-          menuToggler.trigger('click');
-        }
+      $('body').scrollspy({
+        target: '#mmenu'
       });
 
       $('#gal a').each(function () {
