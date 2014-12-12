@@ -552,16 +552,6 @@
         }
       });
 
-      $('#gallery').scrollspy({
-//        min: $('#nav').offset().top,
-        onEnter: function (element, position) {
-          console.log(1);
-        },
-        onLeave: function (element, position) {
-          console.log(2);
-        }
-      });
-
       $('#gal a').each(function () {
         var self = $(this);
         var descr = self.find('.descr');

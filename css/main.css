@@ -388,7 +388,8 @@ h2 {
 }
 @media (max-width: 400px) {
   .starter-template {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
   .alert {
     margin: 10px 0;
