@@ -14,7 +14,7 @@ body a,
 body a:hover,
 body small {
   color: #E91E63;
-/*  color: #333;*/
+  /*  color: #333;*/
 }
 a,
 a:hover,
@@ -26,7 +26,7 @@ a:focus {
   background: #e91e63;
   background: -webkit-linear-gradient(top, #ec407a 0%, #e91e63 100%);
   background: -webkit-linear-gradient(top, #ec407a 0%, #e91e63 100%);
-  background: linear-gradient(to bottom, #ec407a 0%,#e91e63 100%);
+  background: linear-gradient(to bottom, #ec407a 0%, #e91e63 100%);
 }
 #mmenu .wrap {
   padding: 0 15px;
@@ -47,10 +47,11 @@ a:focus {
 #mmenu .navbar-nav>li.active {
 }
 */
+
 #mmenu .navbar-toggle {
   border-color: #f6f6f6;
   -webkit-transition: all .15s;
-          transition: all .15s;
+  transition: all .15s;
 }
 #mmenu .navbar-toggle:hover,
 #mmenu .navbar-toggle:focus {
@@ -60,10 +61,10 @@ a:focus {
 #mmenu .navbar-toggle .icon-bar {
   background-color: #f1f1f1;
   -webkit-transition: all .15s;
-          transition: all .15s;
+  transition: all .15s;
 }
 #mmenu .navbar-toggle:hover .icon-bar,
-#mmenu .navbar-toggle:focus  .icon-bar {
+#mmenu .navbar-toggle:focus .icon-bar {
   background-color: #e91e63;
 }
 .header {
@@ -120,13 +121,13 @@ h2,
 .alert {
   margin: 20px 0;
   padding: 30px;
-/*  border: 1px solid #ccc;*/
+  /*  border: 1px solid #ccc;*/
   border: 1px solid;
   border-left-width: 5px;
-/*  border-left-color: #E91E63;*/
-  border-right-top: #ccc;
+  /*  border-left-color: #E91E63;*/
+  border-top-color: #ccc;
   border-right-color: #ccc;
-  border-right-bottom: #ccc;
+  border-bottom-color: #ccc;
   border-radius: 3px;
   background: #FCE4EC;
   font-size: 32px;
@@ -176,7 +177,7 @@ h2,
   margin: 20px 0 0;
   font-size: 20px;
   line-height: 1;
-/*  color: #D81B60;*/
+  /*  color: #D81B60;*/
 }
 .wg {
   width: 260px;
@@ -211,7 +212,7 @@ h2,
   margin-bottom: 20px;
   padding: 4px;
   background: #F7F7F7;
-/*  border: 2px solid #E91E63;*/
+  /*  border: 2px solid #E91E63;*/
   border: 2px solid;
 }
 .cal iframe {
@@ -298,7 +299,7 @@ h2 {
   width: 100%;
   padding: 4px;
   background: #F7F7F7;
-/*  border: 2px solid #E91E63;*/
+  /*  border: 2px solid #E91E63;*/
   border: 2px solid;
 }
 .blueimp-gallery > .title {
@@ -376,6 +377,34 @@ h2 {
   display: inline-block;
   padding-left: 10px;
   /*  font-style: italic;*/
+}
+.to-top {
+  position: fixed;
+  left: 15px;
+  bottom: 15px;
+  z-index: 2;
+  display: block;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  color: #fff;
+  line-height: 65px;
+  font-size: 50px;
+  background: rgb(233, 30, 99);
+  border-radius: 100%;
+  border: 1px solid #ad1457;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  -webkit-transition: all .15s;
+  transition: all .15s;
+}
+.show-totop .to-top {
+  opacity: .3;
+  visibility: visible;
+}
+.show-totop .to-top:hover {
+  opacity: .5;
 }
 @media (max-width: 1004px) {
   .in .icon,
